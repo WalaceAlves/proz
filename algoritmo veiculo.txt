@@ -1,0 +1,20 @@
+
+
+Usuário insere informações:
+
+1 - Solicite ao usuário que forneça a quantidade de rodas do veículo.
+2 - Solicite o peso bruto em quilogramas.
+3 - Pergunte quantas pessoas o veículo pode acomodar.
+
+4 - Classificação da categoria:
+
+Com base nas informações fornecidas, determine a categoria adequada usando as condições especificadas:
+Categoria A: Veículos com duas ou três rodas.
+Categoria B: Veículos com quatro rodas, que acomodam até oito pessoas e peso até 3500 kg.
+Categoria C: Veículos com quatro rodas ou mais e peso entre 3500 e 6000 kg.
+Categoria D: Veículos com quatro rodas ou mais e que acomodam mais de oito pessoas.
+Categoria E: Veículos com quatro rodas ou mais e com mais de 6000 kg.
+
+5 - Exibir resultado:
+
+Mostre ao usuário a categoria de habilitação recomendada para o veículo.
