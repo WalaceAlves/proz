@@ -1,0 +1,28 @@
+## Seção de Filtro de Produtos - Loja Online:
+
+**Comportamento:**
+
+1. Na página de produtos da loja online, existe um campo de busca com um ícone de lupa.
+2. Ao digitar o nome de um produto no campo de busca, a página filtra instantaneamente os produtos listados, mostrando apenas aqueles que correspondem ao nome digitado.
+3. A filtragem é dinâmica, ou seja, os resultados são atualizados à medida que o usuário digita, sem a necessidade de apertar Enter ou clicar em um botão.
+4. Além do campo de busca, a seção de filtro possui diversos outros critérios, como:
+    Categoria: Permite filtrar por tipo de produto (ex: roupas, eletrônicos).
+    Faixa de preço: Permite filtrar por produtos dentro de um determinado intervalo de preços.
+    Marca: Permite filtrar por produtos de marcas específicas.
+5. Ao selecionar um ou mais critérios de filtro, a página atualiza instantaneamente os produtos listados, mostrando apenas aqueles que atendem a todos os critérios selecionados.
+6. É possível combinar a busca por nome com os critérios de filtro para obter resultados mais específicos.
+
+Evidências do Uso de JavaScript:
+
+Filtragem instantânea: A atualização dinâmica dos produtos listados indica o uso de JavaScript para manipular o DOM (Document Object Model) em tempo real, o que não é possível apenas com HTML e CSS.
+Interatividade dos filtros: A seleção de critérios de filtro e a atualização instantânea dos resultados demonstram a capacidade de JavaScript de capturar eventos e modificar a página em resposta à interação do usuário.
+Combinação de filtros: A possibilidade de combinar diferentes critérios de filtro com a busca por nome reforça a necessidade de JavaScript para processar e combinar múltiplos inputs do usuário.
+
+Conclusão:
+
+O comportamento dinâmico da seção de filtro, com atualização instantânea dos produtos listados em resposta à interação do usuário, indica que JavaScript é essencial para implementar essa funcionalidade.
+
+
+
+
+
