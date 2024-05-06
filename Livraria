@@ -1,0 +1,34 @@
+CREATE DATABASE livraria;
+CREATE TABLE livros (
+  livro_id INT PRIMARY KEY AUTO_INCREMENT,
+  titulo VARCHAR(255) NOT NULL,
+  autor VARCHAR(255) NOT NULL,
+  editora VARCHAR(255) NOT NULL,
+  genero VARCHAR(50) NOT NULL,
+  preco DECIMAL(10,2) NOT NULL,
+  estoque INT NOT NULL
+);
+CREATE TABLE clientes (
+  cliente_id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  endereco VARCHAR(255) NOT NULL,
+  telefone VARCHAR(20) NOT NULL,
+  email VARCHAR(50) NOT NULL
+);
+CREATE TABLE vendas (
+  venda_id INT PRIMARY KEY AUTO_INCREMENT,
+  livro_id INT NOT NULL,
+  cliente_id INT NOT NULL,
+  data_venda DATE NOT NULL,
+  quantidade INT NOT NULL,
+  FOREIGN KEY (livro_id) REFERENCES livros(livro_id),
+  FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)
+);
+CREATE TRIGGER atualiza_estoque
+AFTER INSERT ON vendas
+FOR EACH ROW
+BEGIN
+  UPDATE livros
+  SET estoque = estoque - NEW.quantidade
+  WHERE livro_id = NEW.livro_id;
+END;
