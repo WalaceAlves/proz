@@ -1,0 +1,22 @@
+CREATE PROCEDURE sp_LevantamentoDiarioVendas(
+  @data_venda DATE
+)
+AS
+BEGIN
+  -- 1. Selecionar as vendas do dia informado
+  SELECT
+    p.nome_produto,
+    SUM(iv.quantidade) AS quantidade_vendida
+  FROM produtos p
+  JOIN itens_venda iv ON p.id_produto = iv.id_produto
+  JOIN vendas v ON iv.id_venda = v.id_venda
+  WHERE v.data_venda = @data_venda
+  GROUP BY p.nome_produto;
+
+  -- 2. Opcional: Salvar o resultado em uma tabela temporária
+  -- Se necessário, utilize uma tabela temporária para armazenar o resultado da consulta e acessá-lo posteriormente.
+
+  -- 3. Gerar o relatório (opcional)
+  -- Utilize um script adicional para formatar e gerar o relatório com base nos dados da consulta.
+
+END;
